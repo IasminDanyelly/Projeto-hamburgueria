@@ -78,17 +78,18 @@ function updateCartModal(){
 
 
     total += item.price * item.quantity;
+    
     cartItemsContainer.appendChild(cartItemElement);
   
 
    })
 
-   cartTotal.textContent = total.toLocaleString("pt-BR",{
+   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: 'currency',
     currency: 'BRL'
-   })
+   });
 
-   cartCounter.innerHTML = `(${cart.length})`
+   cartCounter.innerHTML = cart.length;
 }
 
 
