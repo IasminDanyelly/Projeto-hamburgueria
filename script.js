@@ -43,13 +43,17 @@ function addToCart(name, price){
      if(existingItem){
           existingItem.quantity += 1;
           return;
-     }
+     }else{ 
 
      cart.push({
         name,
         price,
         quantity: 1,
      })
+
+     }
+
+     updateCartModal();
 }
 
 
@@ -78,7 +82,7 @@ function updateCartModal(){
 
 
     total += item.price * item.quantity;
-    
+
     cartItemsContainer.appendChild(cartItemElement);
   
 
