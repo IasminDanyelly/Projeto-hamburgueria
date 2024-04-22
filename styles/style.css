@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #F6F7F8;
+}
+
+#flutuar{
+    animation-name:flutuar;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transition:  0.5s all;
+}
+
+
+
+
+@keyframes flutuar{
+    from{
+        transform: translate3d(0,0,0);
+        filter: brightness(50%)
+    }to{
+        transform: translate3d(0, -15px, 0);
+        filter: brightness(120%) 
+    }
+}
